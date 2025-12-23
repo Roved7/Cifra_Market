@@ -10,7 +10,7 @@ class SUserAddRequest(BaseModel):
     name: str
     email: EmailStr
     password: str
-    role_id: int
+
 
 
 class SUserAdd(BaseModel):
