@@ -1,4 +1,7 @@
 from app.database.database import async_session_maker
+from app.repositories.orders import OrderRepository
+from app.repositories.products import ProductRepository
+from app.repositories.reviews import ReviewRepository
 from app.repositories.roles import RolesRepository
 from app.repositories.users import UsersRepository
 
@@ -13,6 +16,9 @@ class DBManager:
         # Пример:
         self.users = UsersRepository(self.session)
         self.roles = RolesRepository(self.session)
+        self.products = ProductRepository(self.session)
+        self.orders = OrderRepository(self.session)
+        self.reviews = ReviewRepository(self.session)
         return self
 
     async def __aexit__(self, *args):
