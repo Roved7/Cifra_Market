@@ -1,0 +1,223 @@
+/* Стили для страниц корзины, доставки и оплаты */
+.checkout-process {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.process-steps {
+    display: flex;
+    gap: 50px;
+}
+
+.process-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+    z-index: 2;
+}
+
+.step-active .step-number {
+    background-color: var(--accent);
+}
+
+.step-text {
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.step-active .step-text {
+    color: var(--accent);
+}
+
+.cart-content, .delivery-content, .payment-content {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.cart-items, .delivery-form, .payment-form {
+    flex: 2;
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.cart-summary, .order-summary {
+    flex: 1;
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+}
+
+.cart-item {
+    display: flex;
+    gap: 20px;
+    padding: 25px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-image {
+    width: 10px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: var(--dark);
+}
+
+.item-description {
+    color: var(--secondary);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.item-price {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1.3rem;
+}
+
+.item-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quantity-btn:hover {
+    background-color: var(--primary);
+}
+
+.quantity {
+    font-weight: 600;
+    min-width: 30px;
+    text-align: center;
+}
+
+.remove-btn {
+    color: var(--secondary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.remove-btn:hover {
+    color: #e74c3c;
+}
+
+.coupon-section, .voucher-section {
+    margin-bottom: 25px;
+}
+
+.coupon-input, .voucher-input {
+    display: flex;
+    gap: 10px;
+}
+
+.coupon-input input, .voucher-input input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.coupon-input button, .voucher-input button {
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.coupon-input button:hover, .voucher-input button:hover {
+    background-color: var(--primary);
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.summary-total {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 2px solid #eee;
+}
+
+.checkout-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    font-size: 1.1rem;
+}
